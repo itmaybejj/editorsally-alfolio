@@ -19,6 +19,19 @@ strong {
   color: var(--global-text-color);
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  padding-top: .5em;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+}
+
+ul {
+  padding-left: 1em;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -38,15 +51,19 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  text-decoration: underline;
 
   &:hover {
     color: var(--global-theme-color);
-    text-decoration: underline;
+    text-decoration-style: double;
   }
 
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
   }
+}
+.nav-link {
+  text-decoration: none;
 }
 
 .table-dark {
@@ -248,9 +265,11 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
+  // border-bottom: 1px solid var(--global-divider-color);
+  background-color: #d1d1f1;
   opacity: 0.95;
+  padding-top: 1.25rem;
+  padding-bottom: .8rem;
 }
 
 .navbar .dropdown-menu,
@@ -301,6 +320,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    text-decoration: none;
+    font-size: 1.75rem;
   }
 
   .navbar-nav .nav-item .nav-link {
@@ -933,7 +954,7 @@ pre {
 }
 
 code {
-  color: var(--global-theme-color);
+  color: var(--red);
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;

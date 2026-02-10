@@ -1,11 +1,11 @@
-let searchTheme = determineComputedTheme();
+//let searchTheme = determineComputedTheme();
 const ninjaKeys = document.querySelector("ninja-keys");
 
-if (searchTheme === "dark") {
+/*if (searchTheme === "dark") {
   ninjaKeys.classList.add("dark");
 } else {
   ninjaKeys.classList.remove("dark");
-}
+}*/
 
 const openSearchModal = () => {
   // collapse navbarNav if expanded on mobile
@@ -15,3 +15,9 @@ const openSearchModal = () => {
   }
   ninjaKeys.open();
 };
+
+const searchToggle = document.querySelector("#search-toggle");
+searchToggle.addEventListener("click", e => {
+  e.preventDefault();
+  openSearchModal();
+})
